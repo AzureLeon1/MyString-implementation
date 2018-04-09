@@ -100,9 +100,12 @@ public:
 		if (len == 0)
 		{
 			len = strlen(str);
-			pstr = new char[len + 1];
-			pstr = strcpy(pstr, str);
-			refCount = new int(1);
+			if (len)
+			{
+				pstr = new char[len + 1];
+				pstr = strcpy(pstr, str);
+				refCount = new int(1);
+			}
 		}
 		else
 		{
