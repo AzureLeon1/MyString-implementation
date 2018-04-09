@@ -132,7 +132,7 @@ public:
 		if (len == 0)
 		{
 			len = str.size();
-			if (!len)
+			if (len)
 			{
 				pstr = new char[len + 1];
 				pstr = myStrCpy(this->pstr, str);
